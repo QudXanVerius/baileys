@@ -13,7 +13,7 @@ WhatsApp Baileys adalah library open-source berbasis WebSocket untuk membangun s
 
 ## Instalasi
 
-Tambahkan dependensi berikut pada file \`package.json\`:
+Tambahkan dependensi berikut pada file `package.json`:
 
 ```json
 "dependencies": {
@@ -24,17 +24,17 @@ Tambahkan dependensi berikut pada file \`package.json\`:
 ## Koneksi
 
 ### Menggunakan QR Code
-\`\`\`javascript
+```javascript
 const { default: makeWASocket } = require('@whiskeysockets/baileys');
 
 const client = makeWASocket({
   browser: ['Ubuntu', 'Chrome', '20.0.0'],
   printQRInTerminal: true
 });
-\`\`\`
+```
 
 ### Menggunakan Pairing Code
-\`\`\`javascript
+```javascript
 const { default: makeWASocket, fetchLatestWAWebVersion } = require('@whiskeysockets/baileys');
 
 const client = makeWASocket({
@@ -46,14 +46,14 @@ const client = makeWASocket({
 const number = "628XXXXX";
 const code = await client.requestPairingCode(number);
 console.log("Pairing Code: " + code);
-\`\`\`
+```
 
 ---
 
 ## Pengiriman Pesan
 
 ### Order Message
-\`\`\`javascript
+```javascript
 const fs = require('fs');
 
 await client.sendMessage(jid, {
@@ -63,10 +63,10 @@ await client.sendMessage(jid, {
   totalAmount1000: 1000000,
   totalCurrencyCode: "IDR"
 }, { quoted: m });
-\`\`\`
+```
 
 ### Poll Message
-\`\`\`javascript
+```javascript
 await client.sendMessage(jid, {
   pollResultMessage: {
     name: "Poll Name",
@@ -80,6 +80,6 @@ await client.sendMessage(jid, {
     }
   }
 });
-\`\`\`
+```
 
 ---
