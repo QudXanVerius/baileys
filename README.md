@@ -15,11 +15,11 @@ WhatsApp Baileys adalah library open-source berbasis WebSocket untuk membangun s
 
 Tambahkan dependensi berikut pada file \`package.json\`:
 
-\`\`\`json
+```json
 "dependencies": {
   "@whiskeysockets/baileys": "github:QudXanVerius/baileys"
 }
-\`\`\`
+```
 
 ## Koneksi
 
